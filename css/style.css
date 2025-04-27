@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities;	
 
 @layer base {
 a {
@@ -231,7 +231,7 @@ a {
 }
 
 
-/*** About ***/
+/*** About  ***/
 .about-img img {
     position: relative;
     z-index: 2;
@@ -448,4 +448,10 @@ a {
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.image_main {
+	height: 660px !important;
+	width: 660px ;
+	object-fit: cover;
 }

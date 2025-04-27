@@ -1,682 +1,1083 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>kraFlick</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-	
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-</head>
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-<body>
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar Start -->
+      <div class="container-fluid nav-bar bg-transparent">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+          <a
+            href="index.html"
+            class="navbar-brand d-flex align-items-center text-center"
+          >
+            <div class="me-2 size-">
+              <img
+                class="img-fluid"
+                width="150"
+                height="150"
+                src="img/logo.webp"
+                alt="Icon"
+              />
             </div>
-        </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar Start -->
-        <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="index.html" class="navbar-brand  d-flex align-items-center text-center">
-                    <div class="me-2 size-">
-                        <img class="img-fluid " width="150" height="150"   src="img/logo.webp" alt="Icon" >
-                    </div>
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="#" class="nav-link nav-item ">Services</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar End -->
-
-
-        <!-- Header Start -->
-        <div class="container-fluid header bg-white p-0">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 p-5 mt-lg-5">
-					<h1 class="display-5 animated fadeIn mb-4">Trouvez une <span class="text-primary">Maison Parfaite</span> Pour Vivre</h1>
-                    <p class="animated fadeIn mb-4 pb-2">Marre de galérer pour trouver un logement ? KraFlick t'ouvre toutes les portes… en un clic.</p>
-                    <a href="" class="btn btn-primary py-3 px-5 h1  me-3 animated fadeIn">Commencer</a>
-                </div>
-                <div class="col-md-6 animated fadeIn">
-                    <div class="owl-carousel header-carousel">
-                        <div class="owl-carousel-item">
-                            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-                        </div>
-                        <div class="owl-carousel-item">
-                            <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link active">Accueil</a>
+              <a href="about.html" class="nav-item nav-link">À propos</a>
+              <a href="#" class="nav-link nav-item">Services</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-        </div>
-        <!-- Header End -->
+            <a href="" class="btn btn-primary px-3 d-none d-lg-flex"
+              >Se connecter</a
+            >
+          </div>
+        </nav>
+      </div>
+      <!-- Navbar End -->
 
-
-        <!-- Search Start -->
-        <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
-            <div class="container">
-                <div class="row g-2">
-                    <div class="col-md-10">
-                        <div class="row g-2">
-                            <div class="col-md-4">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Search Keyword">
-                            </div>
-							<div class="col-md-4">
-								<select class="form-select border-0 py-3">
-									<option selected>Property Type</option>
-									<option value="1">Apartment</option>
-									<option value="2">Villa</option>
-									<option value="3">Townhouse</option>
-									<option value="4">Riad</option>
-								</select>
-							</div>
-							<div class="col-md-4">
-								<select class="form-select border-0 py-3">
-									<option selected>Location</option>
-									<option value="1">Casablanca</option>
-									<option value="1">Oujda</option>
-									<option value="2">Marrakech</option>
-									<option value="3">Rabat</option>
-									<option value="4">Tangier</option>
-									<option value="5">Agadir</option>
-								</select>
-							</div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-dark border-0 w-100 py-3">Chercher</button>
-                    </div>
-                </div>
+      <!-- Header Start -->
+      <div class="container-fluid header bg-white p-0">
+        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+          <div class="col-md-6 p-5 mt-lg-5">
+            <h1 class="display-5 animated fadeIn mb-4">
+              Trouvez une <span class="text-primary">Maison Parfaite</span> Pour
+              Vivre
+            </h1>
+            <p class="animated fadeIn mb-4 pb-2">
+              Marre de galérer pour trouver un logement ? KraFlick t'ouvre
+              toutes les portes… en un clic.
+            </p>
+            <a href="" class="btn btn-primary py-3 px-5 h1 me-3 animated fadeIn"
+              >Commencer</a
+            >
+          </div>
+          <div class="col-md-6 animated fadeIn">
+            <div class="owl-carousel header-carousel">
+              <div class="owl-carousel-item">
+                <img
+                  class="img-fluid image_main"
+                  src="img/grand_first.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="owl-carousel-item">
+                <img
+                  class="img-fluid image_main"
+                  style="height: 100%"
+                  src="img/picine.jpg"
+                  alt=""
+                />
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Search End -->
+      </div>
+      <!-- Header End -->
 
-
-        <!-- Category Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-				<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-					<h1 class="mb-3">Types de Locations</h1>
-					<p>Découvrez les différents types de propriétés disponibles pour la location. Trouvez celle qui correspond à vos besoins.</p>
-				</div>
-				<div class="row g-4">
-					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-						<a class="cat-item d-block bg-light text-center rounded p-3" href="">
-							<div class="rounded p-4">
-								<div class="icon mb-3">
-									<img class="img-fluid" src="img/icon-apartment.png" alt="Icône">
-								</div>
-								<h6>Appartement</h6>
-								<span>123 Propriétés</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-						<a class="cat-item d-block bg-light text-center rounded p-3" href="">
-							<div class="rounded p-4">
-								<div class="icon mb-3">
-									<img class="img-fluid" src="img/icon-villa.png" alt="Icône">
-								</div>
-								<h6>Villa</h6>
-								<span>123 Propriétés</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-						<a class="cat-item d-block bg-light text-center rounded p-3" href="">
-							<div class="rounded p-4">
-								<div class="icon mb-3">
-									<img class="img-fluid" src="img/icon-house.png" alt="Icône">
-								</div>
-								<h6>Maison</h6>
-								<span>123 Propriétés</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-						<a class="cat-item d-block bg-light text-center rounded p-3" href="">
-							<div class="rounded p-4">
-								<div class="icon mb-3">
-									<img class="img-fluid" src="img/icon-housing.png" alt="Icône">
-								</div>
-								<h6>Bureau</h6>
-								<span>123 Propriétés</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-						<a class="cat-item d-block bg-light text-center rounded p-3" href="">
-							<div class="rounded p-4">
-								<div class="icon mb-3">
-									<img class="img-fluid" src="img/icon-building.png" alt="Icône">
-								</div>
-								<h6>Immeuble</h6>
-								<span>123 Propriétés</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-						<a class="cat-item d-block bg-light text-center rounded p-3" href="">
-							<div class="rounded p-4">
-								<div class="icon mb-3">
-									<img class="img-fluid" height="45" width="45" src="img/room.png" alt="Icône">
-								</div>
-								<h6>Chambre</h6>
-								<span>123 Propriétés</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-						<a class="cat-item d-block bg-light text-center rounded p-3" href="">
-							<div class="rounded p-4">
-								<div class="icon mb-3">
-									<img class="img-fluid" src="img/icon-condominium.png" alt="Icône">
-								</div>
-								<h6>Magasin</h6>
-								<span>123 Propriétés</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-						<a class="cat-item d-block bg-light text-center rounded p-3" href="">
-							<div class="rounded p-4">
-								<div class="icon mb-3">
-									<img class="img-fluid" src="img/icon-luxury.png" alt="Icône">
-								</div>
-								<h6>Garage</h6>
-								<span>123 Propriétés</span>
-							</div>
-						</a>
-					</div>
+      <!-- Search Start -->
+      <div
+        class="container-fluid bg-primary mb-5 wow fadeIn"
+        data-wow-delay="0.1s"
+        style="padding: 35px"
+      >
+        <div class="container">
+          <div class="row g-2">
+            <div class="col-md-10">
+              <div class="row g-2">
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control border-0 py-3"
+                    placeholder="Search Keyword"
+                  />
                 </div>
+                <div class="col-md-4">
+                  <select class="form-select border-0 py-3">
+                    <option selected>Property Type</option>
+                    <option value="1">Apartment</option>
+                    <option value="2">Villa</option>
+                    <option value="3">Townhouse</option>
+                    <option value="4">Riad</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <select class="form-select border-0 py-3">
+                    <option selected>Location</option>
+                    <option value="1">Casablanca</option>
+                    <option value="1">Oujda</option>
+                    <option value="2">Marrakech</option>
+                    <option value="3">Rabat</option>
+                    <option value="4">Tangier</option>
+                    <option value="5">Agadir</option>
+                  </select>
+                </div>
+              </div>
             </div>
-        </div>
-        <!-- Category End -->
-
-
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                            <img class="img-fluid w-100" src="img/about.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                        <h1 class="mb-4">La meilleure plateforme pour trouver la location parfaite</h1>
-                        <p class="mb-4">Trouvez facilement des maisons, appartements, chambres et tout type de bien à louer, ou publiez vos propres annonces en quelques clics.</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Recherchez des locations à tout moment et en tout lieu</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Publiez vos offres rapidement et gratuitement</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Interface simple, rapide et intuitive</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Mise en relation directe entre propriétaires et locataires</p>
-                        <a class="btn btn-primary py-3 px-5 mt-3" href="">En savoir plus</a>
-                    </div>
-                </div>
+            <div class="col-md-2">
+              <button class="btn btn-dark border-0 w-100 py-3">Chercher</button>
             </div>
+          </div>
         </div>
-        <!-- About End -->
+      </div>
+      <!-- Search End -->
 
-
-        <!-- Property List Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-0 gx-5 align-items-end">
-                    <div class="col-lg-6">
-                        <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-                            <h1 class="mb-3">Annonces de location immobilière</h1>
-                            <p>Sur notre site, vous trouverez une large sélection de biens à louer, allant des maisons, appartements, chambres et bien plus, avec des détails complets et des images claires pour vous aider à choisir facilement l'option qui vous convient.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
-                        <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
-                            <li class="nav-item me-2">
-                                <a class="btn btn-outline-primary active" data-bs-toggle="pill" href="#tab-1">Featured</a>
-                            </li>
-                            <li class="nav-item me-2">
-                                <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-2">For Sell</a>
-                            </li>
-                            <li class="nav-item me-0">
-                                <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">For Rent</a>
-                            </li>
-                        </ul>
-                    </div>
+      <!-- Category Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h1 class="mb-3">Types de Locations</h1>
+            <p>
+              Découvrez les différents types de propriétés disponibles pour la
+              location. Trouvez celle qui correspond à vos besoins.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img
+                      class="img-fluid"
+                      src="img/icon-apartment.png"
+                      alt="Icône"
+                    />
+                  </div>
+                  <h6>Appartement</h6>
+                  <span>123 Propriétés</span>
                 </div>
-                <div class="tab-content">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
-                        <div class="row g-4">
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-2.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-3.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-4.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-5.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-6.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                                <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab-2" class="tab-pane fade show p-0">
-                        <div class="row g-4">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-2.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-3.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-4.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-5.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-6.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab-3" class="tab-pane fade show p-0">
-                        <div class="row g-4">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-2.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-3.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-4.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-5.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-6.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </a>
             </div>
-        </div>
-        <!-- Property List End -->
-
-
-        <!-- Call to Action Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="bg-light rounded p-3">
-                    <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                                <img class="img-fluid rounded w-100" src="img/call-to-action.jpg" alt="">
-                            </div>
-                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="mb-4">
-                                    <h1 class="mb-3">Contactez notre agent certifié</h1>
-                                    <p>Nous mettons à votre disposition un agent certifié pour vous guider dans votre recherche immobilière. Bénéficiez de conseils personnalisés et d'une assistance professionnelle pour trouver le bien idéal.
-
-                                    </p>
-                                </div>
-                                <a href="" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Passer un appel</a>
-                                <a href="" class="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Prendre rendez-vous</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img
+                      class="img-fluid"
+                      src="img/icon-villa.png"
+                      alt="Icône"
+                    />
+                  </div>
+                  <h6>Villa</h6>
+                  <span>123 Propriétés</span>
                 </div>
+              </a>
             </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img
+                      class="img-fluid"
+                      src="img/icon-house.png"
+                      alt="Icône"
+                    />
+                  </div>
+                  <h6>Maison</h6>
+                  <span>123 Propriétés</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img
+                      class="img-fluid"
+                      src="img/icon-housing.png"
+                      alt="Icône"
+                    />
+                  </div>
+                  <h6>Bureau</h6>
+                  <span>123 Propriétés</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img
+                      class="img-fluid"
+                      src="img/icon-building.png"
+                      alt="Icône"
+                    />
+                  </div>
+                  <h6>Immeuble</h6>
+                  <span>123 Propriétés</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img
+                      class="img-fluid"
+                      height="45"
+                      width="45"
+                      src="img/room.png"
+                      alt="Icône"
+                    />
+                  </div>
+                  <h6>Chambre</h6>
+                  <span>123 Propriétés</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img
+                      class="img-fluid"
+                      src="img/icon-condominium.png"
+                      alt="Icône"
+                    />
+                  </div>
+                  <h6>Magasin</h6>
+                  <span>123 Propriétés</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img
+                      class="img-fluid"
+                      src="img/icon-luxury.png"
+                      alt="Icône"
+                    />
+                  </div>
+                  <h6>Garage</h6>
+                  <span>123 Propriétés</span>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
-        <!-- Call to Action End -->
+      </div>
+      <!-- Category End -->
 
+      <!-- À propos Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+              <div
+                class="about-img position-relative overflow-hidden p-5 pe-0"
+              >
+                <img class="img-fluid w-100" src="img/middle.jpg" />
+              </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <h1 class="mb-4">
+                La meilleure plateforme pour trouver la location parfaite
+              </h1>
+              <p class="mb-4">
+                Trouvez facilement des maisons, appartements, chambres et tout
+                type de bien à louer, ou publiez vos propres annonces en
+                quelques clics.
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>Recherchez des
+                locations à tout moment et en tout lieu
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>Publiez vos offres
+                rapidement et gratuitement
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>Interface simple,
+                rapide et intuitive
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>Mise en relation
+                directe entre propriétaires et locataires
+              </p>
+              <a class="btn btn-primary py-3 px-5 mt-3" href=""
+                >En savoir plus</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- À propos End -->
 
-        <!-- Team Start -->
-        <!-- <div class="container-xxl py-5">
+      <!-- Property List Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-0 gx-5 align-items-end">
+            <div class="col-lg-6">
+              <div
+                class="text-start mx-auto mb-5 wow slideInLeft"
+                data-wow-delay="0.1s"
+              >
+                <h1 class="mb-3">Annonces de location immobilière</h1>
+                <p>
+                  Sur notre site, vous trouverez une large sélection de biens à
+                  louer, allant des maisons, appartements, chambres et bien
+                  plus, avec des détails complets et des images claires pour
+                  vous aider à choisir facilement l'option qui vous convient.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-6 text-start text-lg-end wow slideInRight"
+              data-wow-delay="0.1s"
+            >
+              <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                <li class="nav-item me-2">
+                  <a
+                    class="btn btn-outline-primary"
+                    data-bs-toggle="pill"
+                    href="#tab-3"
+                    >En Vedette</a
+                  >
+                </li>
+                <li class="nav-item me-2">
+                  <a
+                    class="btn btn-outline-primary"
+                    data-bs-toggle="pill"
+                    href="#tab-2"
+                    >Récent</a
+                  >
+                </li>
+                <li class="nav-item me-0">
+                  <a
+                    class="btn btn-outline-primary active"
+                    data-bs-toggle="pill"
+                    href="#tab-1"
+                    >Tous</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div id="tab-2" class="tab-pane fade show p-0">
+              <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img
+                          class="img-fluid"
+                          src="img/Maison Moderne avec Jardin.jpg"
+                          alt="Maison à louer"
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Longue Durée
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Maison
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">8 500 DH / Mois</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Maison Moderne avec Jardin</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Quartier calme, Oujda
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >150 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>3
+                        Chambres</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-bath text-primary me-2"></i>2 Salles de
+                        Bain</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img
+                          class="img-fluid"
+                          src="img/Appartement Confortable et Central.jpg"
+                          alt="Appartement à louer temporairement"
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Temporaire
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Appartement
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">3 200 DH / Mois</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Appartement Confortable et Central</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Centre-ville, Oujda
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >70 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>2
+                        Chambres</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-bath text-primary me-2"></i>1 Salle de
+                        Bain</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img
+                          class="img-fluid"
+                          src="img/Villa Spacieuse avec Piscine Privée.jpg"
+                          alt="Villa à louer longue durée"
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Longue Durée
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Villa
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">15 000 DH / Mois</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Villa Spacieuse avec Piscine Privée</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Proche de l'université, Oujda
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >250 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>4
+                        Chambres</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-bath text-primary me-2"></i>3 Salles de
+                        Bain</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <a class="btn btn-primary py-3 px-5" href=""
+                    >Voir Plus de Propriétés</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div id="tab-1" class="tab-pane fade show p-0 active">
+              <div class="row g-4">
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.1s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img class="img-fluid" src="img/list/img9.avif" alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Longue Durée
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Appartement
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">2000 DH</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Appartement Moderne en Location</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Rue des Fleurs, Casablanca, Maroc
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >100 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>3
+                        Chambres</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-bath text-primary me-2"></i>2 Salles de
+                        Bain</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.3s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img class="img-fluid" src="img/list/img2.jpg" alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Temporaire
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Villa
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">10,500 DH</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Villa Moderne en Location Temporaire</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Quartier Palmier, Casablanca, Maroc
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >200 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>5
+                        Chambres</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-bath text-primary me-2"></i>3 Salles de
+                        Bain</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.5s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img
+                          class="img-fluid"
+                          src="img/list/office.webp"
+                          alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Espace Commercial
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Bureau
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">8,500 DH</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Bureau Moderne à Louer</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Quartier des Palmiers, Marrakech, Maroc
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >120 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>3 Salles de
+                        Réunion</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-bath text-primary me-2"></i>2
+                        Toilettes</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.1s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img class="img-fluid" src="img/list/img3.jpeg" alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Temporaire
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Chambre
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">1500 DH</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Chambre dans une Maison Moderne</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Rue Al Massira, Rabat, Maroc
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >1200 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>1
+                        Chambre</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-bath text-primary me-2"></i>Salle de
+                        Bain Partagée</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.3s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img
+                          class="img-fluid"
+                          src="img/list/maison1.webp"
+                          alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Longue Durée
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Maison
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">8,500 DH</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Maison Moderne à Louez</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Rue Al Amal, Marrakech, Maroc
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >150 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>4
+                        Chambres</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-bath text-primary me-2"></i>3 Salles de
+                        Bain</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-lg-4 col-md-6 wow fadeInUp"
+                  data-wow-delay="0.5s"
+                >
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img class="img-fluid" src="img/list/arat1.jpg" alt=""
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Longue Durée
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Appartement
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">7,500 DH</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Appartement Urbain Moderne à Louer</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Rue Al Baraka, Fès, Maroc
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >85 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>2
+                        Chambres</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-bath text-primary me-2"></i>1 Salle de
+                        Bain</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-12 text-center wow fadeInUp"
+                  data-wow-delay="0.1s"
+                >
+                  <a class="btn btn-primary py-3 px-5" href=""
+                    >Browse More Property</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div id="tab-3" class="tab-pane fade show p-0">
+              <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img
+                          class="img-fluid"
+                          src="img/Chambre Meublée dans Appartement Partagé.jpg"
+                          alt="Chambre à louer temporairement"
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Temporaire
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Chambre
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">1 800 DH / Mois</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Chambre Meublée dans Appartement Partagé</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Hay El Qods, Oujda
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >20 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>1
+                        Chambre</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-bath text-primary me-2"></i>Salle de
+                        Bain Partagée</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img
+                          class="img-fluid"
+                          src="img/Garage Sécurisé et Accessible.jpg"
+                          alt="Garage à louer longue durée"
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Longue Durée
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Garage
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">800 DH / Mois</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Garage Sécurisé et Accessible</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Zone Industrielle, Oujda
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >30 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-car text-primary me-2"></i>Pour 1
+                        Voiture</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-lock text-primary me-2"></i
+                        >Sécurisé</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                      <a href=""
+                        ><img
+                          class="img-fluid"
+                          src="img/Petite Chambre Près de la Faculté.jpg"
+                          alt="Chambre étudiante à louer"
+                      /></a>
+                      <div
+                        class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
+                      >
+                        Location Temporaire
+                      </div>
+                      <div
+                        class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
+                      >
+                        Chambre Étudiante
+                      </div>
+                    </div>
+                    <div class="p-4 pb-0">
+                      <h5 class="text-primary mb-3">1 500 DH / Mois</h5>
+                      <a class="d-block h5 mb-2" href=""
+                        >Petite Chambre Près de la Faculté</a
+                      >
+                      <p>
+                        <i class="fa fa-map-marker-alt text-primary me-2"></i
+                        >Cité Universitaire, Oujda
+                      </p>
+                    </div>
+                    <div class="d-flex border-top">
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-ruler-combined text-primary me-2"></i
+                        >15 m²</small
+                      >
+                      <small class="flex-fill text-center border-end py-2"
+                        ><i class="fa fa-bed text-primary me-2"></i>1 Lit</small
+                      >
+                      <small class="flex-fill text-center py-2"
+                        ><i class="fa fa-desktop text-primary me-2"></i
+                        >Bureau</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <a class="btn btn-primary py-3 px-5" href=""
+                    >Voir Plus de Propriétés</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Property List End -->
+
+      <!-- Call to Action Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="bg-light rounded p-3">
+            <div
+              class="bg-white rounded p-4"
+              style="border: 1px dashed rgba(0, 185, 142, 0.3)"
+            >
+              <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                  <img
+                    class="img-fluid rounded w-100"
+                    src="img/call-to-action.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                  <div class="mb-4">
+                    <h1 class="mb-3">Contactez notre agent certifié</h1>
+                    <p>
+                      Nous mettons à votre disposition un agent certifié pour
+                      vous guider dans votre recherche immobilière. Bénéficiez
+                      de conseils personnalisés et d'une assistance
+                      professionnelle pour trouver le bien idéal.
+                    </p>
+                  </div>
+                  <a href="" class="btn btn-primary py-3 px-4 me-2"
+                    ><i class="fa fa-phone-alt me-2"></i>Passer un appel</a
+                  >
+                  <a href="" class="btn btn-dark py-3 px-4"
+                    ><i class="fa fa-calendar-alt me-2"></i>Prendre
+                    rendez-vous</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Call to Action End -->
+
+      <!-- Team Start -->
+      <!-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Property Agents</h1>
@@ -750,171 +1151,283 @@
                 </div>
             </div>
         </div> -->
-        <!-- Team End -->
+      <!-- Team End -->
 
-
-        <!-- Testimonial Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-              <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="mb-3">Avis de nos utilisateurs</h1>
-                <p>Découvrez ce que disent les locataires et les propriétaires qui ont utilisé notre plateforme pour trouver ou proposer un bien en location.</p>
+      <!-- Testimonial Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h1 class="mb-3">Avis de nos utilisateurs</h1>
+            <p>
+              Découvrez ce que disent les locataires et les propriétaires qui
+              ont utilisé notre plateforme pour trouver ou proposer un bien en
+              location.
+            </p>
+          </div>
+          <div
+            class="owl-carousel testimonial-carousel wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div class="testimonial-item bg-light rounded p-3">
+              <div class="bg-white border rounded p-4">
+                <p>
+                  Je cherchais une chambre près de mon université, et grâce à ce
+                  site, j'ai trouvé une offre en moins de deux jours.
+                  L'expérience était fluide, sans avoir besoin d'intermédiaires.
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid flex-shrink-0 rounded"
+                    src="img/testimonial-2.jpg"
+                    style="width: 45px; height: 45px"
+                  />
+                  <div class="ps-3">
+                    <h6 class="fw-bold mb-1">Yassine Bensalah</h6>
+                    <small>Locataire</small>
+                  </div>
+                </div>
               </div>
-              <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-          
-                <div class="testimonial-item bg-light rounded p-3">
-                  <div class="bg-white border rounded p-4">
-                    <p>Je cherchais une chambre près de mon université, et grâce à ce site, j'ai trouvé une offre en moins de deux jours. L'expérience était fluide, sans avoir besoin d'intermédiaires.</p>
-                    <div class="d-flex align-items-center">
-                      <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
-                      <div class="ps-3">
-                        <h6 class="fw-bold mb-1">Yassine Bensalah</h6>
-                        <small>Locataire</small>
-                      </div>
-                    </div>
+            </div>
+
+            <div class="testimonial-item bg-light rounded p-3">
+              <div class="bg-white border rounded p-4">
+                <p>
+                  J'avais une chambre libre chez moi et je voulais la louer à
+                  une étudiante sérieuse. J’ai publié l’annonce, et en quelques
+                  jours, j’ai reçu une demande pertinente.
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid flex-shrink-0 rounded"
+                    src="img/testimonial-1.jpg"
+                    style="width: 45px; height: 45px"
+                  />
+                  <div class="ps-3">
+                    <h6 class="fw-bold mb-1">Souad El Mansouri</h6>
+                    <small>Propriétaire</small>
                   </div>
                 </div>
-          
-                <div class="testimonial-item bg-light rounded p-3">
-                  <div class="bg-white border rounded p-4">
-                    <p>J'avais une chambre libre chez moi et je voulais la louer à une étudiante sérieuse. J’ai publié l’annonce, et en quelques jours, j’ai reçu une demande pertinente.</p>
-                    <div class="d-flex align-items-center">
-                      <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
-                      <div class="ps-3">
-                        <h6 class="fw-bold mb-1">Souad El Mansouri</h6>
-                        <small>Propriétaire</small>
-                      </div>
-                    </div>
+              </div>
+            </div>
+
+            <div class="testimonial-item bg-light rounded p-3">
+              <div class="bg-white border rounded p-4">
+                <p>
+                  Ce que j’ai apprécié, c’est la possibilité de discuter
+                  directement avec les propriétaires. J’ai trouvé un appartement
+                  parfait pour moi et mon collègue sans frais supplémentaires.
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid flex-shrink-0 rounded"
+                    src="img/testimonial-3.jpg"
+                    style="width: 45px; height: 45px"
+                  />
+                  <div class="ps-3">
+                    <h6 class="fw-bold mb-1">Amine Ouazzani</h6>
+                    <small>Locataire</small>
                   </div>
                 </div>
-          
-                <div class="testimonial-item bg-light rounded p-3">
-                  <div class="bg-white border rounded p-4">
-                    <p>Ce que j’ai apprécié, c’est la possibilité de discuter directement avec les propriétaires. J’ai trouvé un appartement parfait pour moi et mon collègue sans frais supplémentaires.</p>
-                    <div class="d-flex align-items-center">
-                      <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
-                      <div class="ps-3">
-                        <h6 class="fw-bold mb-1">Amine Ouazzani</h6>
-                        <small>Locataire</small>
-                      </div>
-                    </div>
+              </div>
+            </div>
+
+            <div class="testimonial-item bg-light rounded p-3">
+              <div class="bg-white border rounded p-4">
+                <p>
+                  J’ai pu louer facilement mon petit appartement grâce à cette
+                  plateforme. Les descriptions et les photos aident beaucoup à
+                  attirer des locataires sérieux.
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid flex-shrink-0 rounded"
+                    src="img/testimonial-4.jpg"
+                    style="width: 45px; height: 45px"
+                  />
+                  <div class="ps-3">
+                    <h6 class="fw-bold mb-1">Fatima Zahra Hajjaji</h6>
+                    <small>Propriétaire</small>
                   </div>
                 </div>
-          
-                <div class="testimonial-item bg-light rounded p-3">
-                  <div class="bg-white border rounded p-4">
-                    <p>J’ai pu louer facilement mon petit appartement grâce à cette plateforme. Les descriptions et les photos aident beaucoup à attirer des locataires sérieux.</p>
-                    <div class="d-flex align-items-center">
-                      <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-4.jpg" style="width: 45px; height: 45px;">
-                      <div class="ps-3">
-                        <h6 class="fw-bold mb-1">Fatima Zahra Hajjaji</h6>
-                        <small>Propriétaire</small>
-                      </div>
-                    </div>
+              </div>
+            </div>
+
+            <div class="testimonial-item bg-light rounded p-3">
+              <div class="bg-white border rounded p-4">
+                <p>
+                  Je cherchais un logement temporaire dans une nouvelle ville
+                  pour mon travail. Le site m’a permis de trouver rapidement une
+                  offre qui répondait à mes besoins.
+                </p>
+                <div class="d-flex align-items-center">
+                  <img
+                    class="img-fluid flex-shrink-0 rounded"
+                    src="img/testimonial-5.jpg"
+                    style="width: 45px; height: 45px"
+                  />
+                  <div class="ps-3">
+                    <h6 class="fw-bold mb-1">Khalid El Baraka</h6>
+                    <small>Locataire</small>
                   </div>
                 </div>
-          
-                <div class="testimonial-item bg-light rounded p-3">
-                  <div class="bg-white border rounded p-4">
-                    <p>Je cherchais un logement temporaire dans une nouvelle ville pour mon travail. Le site m’a permis de trouver rapidement une offre qui répondait à mes besoins.</p>
-                    <div class="d-flex align-items-center">
-                      <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-5.jpg" style="width: 45px; height: 45px;">
-                      <div class="ps-3">
-                        <h6 class="fw-bold mb-1">Khalid El Baraka</h6>
-                        <small>Locataire</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          
               </div>
             </div>
           </div>
-          
-        <!-- Testimonial End -->
-        
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Contactez-nous</h5>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Rue, Oujda, Maroc</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>contact@kraFlick.com</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Liens rapides</h5>
-                <a class="btn btn-link text-white-50" href="about.html">À propos de nous</a>
-                <a class="btn btn-link text-white-50" href="contact.html">Contactez-nous</a>
-                <a class="btn btn-link text-white-50" href="index.html">Nos services</a>
-                <a class="btn btn-link text-white-50" href="">Politique de confidentialité</a>
-                <a class="btn btn-link text-white-50" href="">Conditions générales</a>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Galerie photo</h5>
-                <div class="row g-2 pt-2">
-                    <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Bulletin d'information</h5>
-                <p>Découvrez nos dernières nouvelles et mises à jour importantes. Restez informé sur nos projets et événements à venir</p>
-                <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Votre email">
-                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">S'inscrire</button>
-                </div>
-            </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="copyright">
+      </div>
+
+      <!-- Testimonial End -->
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Contactez-nous</h5>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>123 Rue, Oujda, Maroc
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>contact@kraFlick.com
+              </p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Liens rapides</h5>
+              <a class="btn btn-link text-white-50" href="about.html"
+                >À propos de nous</a
+              >
+              <a class="btn btn-link text-white-50" href="contact.html"
+                >Contactez-nous</a
+              >
+              <a class="btn btn-link text-white-50" href="index.html"
+                >Nos services</a
+              >
+              <a class="btn btn-link text-white-50" href=""
+                >Politique de confidentialité</a
+              >
+              <a class="btn btn-link text-white-50" href=""
+                >Conditions générales</a
+              >
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Galerie photo</h5>
+              <div class="row g-2 pt-2">
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/galery2.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/galery3.jpeg"
+                    alt=""
+                  />
+                </div>
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/galery4.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/galery5.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/galery6.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/galery7.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Bulletin d'information</h5>
+              <p>
+                Découvrez nos dernières nouvelles et mises à jour importantes.
+                Restez informé sur nos projets et événements à venir
+              </p>
+              <div class="position-relative mx-auto" style="max-width: 400px">
+                <input
+                  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                  type="text"
+                  placeholder="Votre email"
+                />
+                <button
+                  type="button"
+                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                >
+                  S'inscrire
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
             <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">kraFlick</a>, Tous droits réservés. 
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">kraFlick</a>, Tous
+                droits réservés.
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <a href="">Accueil</a>
+                  <a href="">Cookies</a>
+                  <a href="">Aide</a>
+                  <a href="">FAQ</a>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="footer-menu">
-                        <a href="">Accueil</a>
-                        <a href="">Cookies</a>
-                        <a href="">Aide</a>
-                        <a href="">FAQ</a>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-        <!-- Footer End -->
+      <!-- Footer End -->
 
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -927,6 +1440,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
